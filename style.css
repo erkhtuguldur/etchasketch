@@ -16,12 +16,16 @@
 }
 
 html, body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: rgb(2, 84, 160);
+}
+
+body{
+    gap: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

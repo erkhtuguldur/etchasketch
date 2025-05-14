@@ -2,8 +2,9 @@
     margin: auto;
 
     display: flex;
-    height: 720px;
-    width: 720px;
+    /* height: 720px; */
+    width: 40%;
+    aspect-ratio: 1/1;
     flex-wrap: wrap;
 
    

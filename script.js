@@ -4,13 +4,11 @@ let penColor="rgb(0,0,0)";
 
 const rightContainer=document.createElement("div");
 const leftContainer=document.createElement("div");
-const colorPicker=document.createElement("input");
-const colorButton=document.createElement("button");
-const eraserButton=document.createElement("button");
+
+
+
+
 const dimensionButton=document.createElement("button");
-const clearButton=document.createElement("button");
-
-
 dimensionButton.textContent="Change dimensions";
 dimensionButton.addEventListener("click",function(){
     notValid=true;
@@ -30,6 +28,8 @@ dimensionButton.addEventListener("click",function(){
     gridMaker(dim);
 })
 
+
+const clearButton=document.createElement("button");
 clearButton.textContent="Clear";
 clearButton.addEventListener("click",function(){
     let list=container.children;
@@ -38,19 +38,32 @@ clearButton.addEventListener("click",function(){
     }
 });
 
+const eraserButton=document.createElement("button");
 eraserButton.textContent="Eraser";
 eraserButton.addEventListener("click",function(){penColor="rgb(255,255,255)"});
 
-colorButton.textContent="Select";
+const colorPicker=document.createElement("input");
 colorPicker.type="color";
+colorPicker.addEventListener("change",function(){
+     penColor=colorPicker.value;
+});
+colorPicker.addEventListener("click",function(){
+    penColor=colorPicker.value;
+});
+
 bodyElement.insertBefore(rightContainer,container);
 bodyElement.appendChild(leftContainer);
-rightContainer.style.display="flex"
+
+rightContainer.style.display="flex";
+rightContainer.style.flex="auto";
+
+
 leftContainer.style.display="flex";
-rightContainer.style.flex="auto"
 leftContainer.style.flex="auto";
+
+
 rightContainer.appendChild(colorPicker);
-rightContainer.appendChild(colorButton);
+// rightContainer.appendChild(colorButton);
 rightContainer.appendChild(eraserButton);
 rightContainer.style.justifyContent="center"
 
@@ -58,9 +71,7 @@ rightContainer.style.justifyContent="center"
 leftContainer.style.justifyContent="center";
 leftContainer.appendChild(dimensionButton);
 leftContainer.appendChild(clearButton);
-colorButton.addEventListener("click",function(){
-    penColor=colorPicker.value;
-});
+
 
 
 function gridMaker(dimension=16){

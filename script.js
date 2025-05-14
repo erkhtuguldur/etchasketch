@@ -63,7 +63,6 @@ leftContainer.style.flex="auto";
 
 
 rightContainer.appendChild(colorPicker);
-// rightContainer.appendChild(colorButton);
 rightContainer.appendChild(eraserButton);
 rightContainer.style.justifyContent="center"
 

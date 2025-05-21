@@ -6,21 +6,21 @@
     width: 40%;
     aspect-ratio: 1/1;
     flex-wrap: wrap;
-
+    border:2px solid rgb(0, 0, 0);
    
 }
 
 #container > div{
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
-    border:1px solid rgb(85, 81, 81);
+    
 }
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(2, 84, 160);
+
 }
 
 body{
@@ -28,5 +28,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: w;
 }
 
